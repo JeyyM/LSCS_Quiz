@@ -1,13 +1,647 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.side-nav {
+  width: 5.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.school-button {
+  height: 7.5rem;
+  width: 100%;
+  margin-top: 2px;
+  border: none;
+  background-color: #f4f4f4;
+}
+
+.school-img {
+  width: 100%;
+  margin: auto;
+}
+
+.nav-item-2 {
+  width: 100%;
+  height: 4.3rem;
+  border: none;
+  margin-bottom: 1px;
+  background-color: #f4f4f4;
+}
+
+.nav-item-2:hover {
+  filter: brightness(90%);
+}
+
+.nav-item {
+  width: 100%;
+  min-height: 4rem;
+  border: none;
+  background-color: #f4f4f4;
+}
+
+.nav-item:hover {
+  filter: brightness(90%);
+}
+
+.profile-img {
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  margin: auto;
+  outline: 2px solid green;
+}
+
+.nav-svg {
+  background: darkgreen;
+  height: 2.6rem;
+  margin: auto;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.nav-dashboard {
+  mask-image: url("../public/svgs/dashboard.svg");
+}
+
+.nav-book {
+  height: 2.5rem;
+  mask-image: url("../public/svgs/book.svg");
+}
+
+.nav-group {
+  mask-image: url("../public/svgs/group.svg");
+}
+
+.nav-calendar {
+  height: 3rem;
+  mask-image: url("../public/svgs/calendar.svg");
+}
+
+.nav-inbox {
+  mask-image: url("../public/svgs/inbox.svg");
+}
+
+.nav-clock {
+  mask-image: url("../public/svgs/clock.svg");
+}
+
+.nav-studio {
+  mask-image: url("../public/svgs/studio.svg");
+}
+
+.kaltura-img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.nav-question {
+  mask-image: url("../public/svgs/question.svg");
+}
+
+.nav-library {
+  mask-image: url("../public/svgs/library.svg");
+}
+
+.nav-back {
+  mask-image: url("../public/svgs/back.svg");
+  transform: scaleX(-1);
+}
+
+.content {
+  background-color: #f4f4f4;
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.header {
+  display: flex;
+  height: 7rem;
+  align-items: center;
+}
+
+.header-menu {
+  background: rgb(0, 44, 0);
+  height: 2.5rem;
+  width: 2.5rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("../public/svgs/menu.svg");
+  margin-right: 2.5rem;
+}
+
+.header-font-1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 1.8rem;
+  color: rgb(57, 57, 57);
+}
+
+.header-link {
+  color: rgb(0, 44, 0);
+}
+
+.header-chevron {
+  background: gray;
+  height: 1.8rem;
+  width: 1.8rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("../public/svgs/chevron.svg");
+  margin: 0 0.3rem;
+}
+
+.quiz-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(39, 39, 39);
+}
+
+.quiz-menu {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.quiz-sidebar {
+  margin-top: 3rem;
+  width: 31.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.detail-display {
+  display: flex;
+  padding: 1.2rem 0.8rem;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  column-gap: 6rem;
+}
+
+.detail-font {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: rgb(39, 39, 39);
+}
+
+.detail-bold {
+  font-weight: 700 !important;
+}
+
+.detail-time {
+  font-size: 1.4rem;
+}
+
+.instruction-label {
+  margin: 2rem 0;
+}
+
+.instruction-font {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: rgb(39, 39, 39);
+  margin-right: 4rem;
+}
+
+.submission-divide {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.submission-width {
+  width: 60%;
+}
+
+.submission-font {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: rgb(39, 39, 39);
+  margin-left: 1rem;
+}
+
+.take-quiz-button {
+  width: auto;
+  height: auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: white;
+  background-color: darkgreen;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(0, 44, 0);
+  display: block;
+}
+
+.take-quiz-button:active {
+  filter: brightness(1.2);
+}
+
+.reset-quiz-button {
+  width: auto;
+  height: auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: white;
+  background-color: rgb(134, 0, 0);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(72, 0, 0);
+  display: block;
+}
+
+.reset-quiz-button:active {
+  filter: brightness(1.2);
+}
+
+.button-container {
+  display: flex;
+  margin: 4rem;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.question-container {
+  display: flex;
+}
+
+.question-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  height: auto;
+  width: 100%;
+  margin: 1rem 2rem;
+  padding-bottom: 2rem;
+}
+
+.question-label {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: rgb(230, 230, 230);
+  border-bottom: 1px solid gray;
+  display: flex;
+}
+
+.question-font-1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: rgb(39, 39, 39);
+}
+
+.question-font-2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: rgb(39, 39, 39);
+  font-size: 1.6rem;
+  margin: 1.5rem;
+}
+
+.question-radio {
+  margin-left: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.question-menu {
+  width: 100%;
+  padding: 2rem 2rem;
+  height: auto;
+}
+
+.next-buttons {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.next {
+  width: 9rem;
+  height: 4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: rgb(39, 39, 39);
+  font-size: 1.6rem;
+}
+
+.questions-nav {
+  background: rgb(39, 39, 39);
+  height: 1.5rem;
+  width: 1.5rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("../public/svgs/question.svg");
+}
+
+.questions-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 15%;
+  cursor: pointer;
+}
+
+.q-side-font {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: rgb(39, 39, 39);
+  font-size: 1.6rem;
+}
+
+.pointer {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  background: rgb(173, 173, 173);
+  margin-top: 2rem;
+}
+
+.pointer:after, .pointer:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.pointer:after {
+  left: 0;
+  bottom: 0;
+  border-left: 1rem solid rgb(173, 173, 173);
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.pointer:before {
+  right: -1rem;
+  bottom: 0;
+  border-left: 1rem solid rgb(173, 173, 173);
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.pointer.marked {
+  background: orangered;
+}
+
+.pointer.marked:after {
+  border-left-color: orangered;
+}
+
+.pointer.marked:before {
+  border-left-color: orangered;
+}
+
+.pointer.correct {
+  position: absolute;
+  left: -8rem; /* Adjust this value to position the pointer correctly */
+  top: 50%;
+  transform: translateY(-75%);
+  width: auto;
+  height: 4rem;
+  background: green;
+  padding: 0rem 1rem 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.pointer.correct:after, .pointer.correct:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.pointer.correct:after {
+  left: 0;
+  bottom: 0;
+  border-left: 2rem solid green; /* Double the border-left */
+  border-top: 2rem solid transparent; /* Double the border-top */
+  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+}
+
+.pointer.correct:before {
+  right: -2rem; /* Double the right offset */
+  bottom: 0;
+  border-left: 2rem solid green; /* Double the border-left */
+  border-top: 2rem solid transparent; /* Double the border-top */
+  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+}
+
+.pointer.wrong {
+  position: absolute;
+  left: -9rem; /* Adjust this value to position the pointer correctly */
+  top: 50%;
+  transform: translateY(-75%);
+  width: auto;
+  height: 4rem;
+  background: darkred;
+  padding: 0rem 1rem 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.pointer.wrong:after, .pointer.wrong:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.pointer.wrong:after {
+  left: 0;
+  bottom: 0;
+  border-left: 2rem solid darkred; /* Double the border-left */
+  border-top: 2rem solid transparent; /* Double the border-top */
+  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+}
+
+.pointer.wrong:before {
+  right: -2rem; /* Double the right offset */
+  bottom: 0;
+  border-left: 2rem solid darkred; /* Double the border-left */
+  border-top: 2rem solid transparent; /* Double the border-top */
+  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+}
+
+
+.hide-time {
+  color: cornflowerblue;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+@keyframes fillAnimation {
+  0% {
+    background: conic-gradient(cornflowerblue 0%, rgb(169, 169, 169) 0%);
+  }
+  100% {
+    background: conic-gradient(cornflowerblue var(--target-percentage), rgb(169, 169, 169) var(--target-percentage));
+  }
+}
+.percent-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.bg-color {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  background-color: rgb(169, 169, 169);
+  position: relative;
+}
+
+.fill-color {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.center-color {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.point-result {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(39, 39, 39);
+}
+
+.detail-font {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: rgb(39, 39, 39);
+}
+
+.attempt-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: rgb(39, 39, 39);
+  margin: 1rem 0;
+}
+
+.history-table table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.history-table th, .history-table td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: middle; /* Center the text vertically */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(39, 39, 39);
+  border-bottom: 1px solid #ddd; /* Horizontal borders */
+}
+
+.history-table th {
+  font-weight: bold; /* Ensure headers are bold */
+}
+
+.th, .tside {
+  font-weight: bold !important; /* Ensure headers are bold */
+}
+
+.history-table td {
+  border-right: 1px solid #ddd; /* Vertical borders */
+}
+
+.history-table td:last-child {
+  border-right: none; /* Remove right border from the last column */
+}
+
+.history-table th, .history-table td:first-child {
+  border-left: 1px solid #ddd; /* Vertical border on the left */
+}
+
+.history-table th:last-child, .history-table td:last-child {
+  border-right: 1px solid #ddd; /* Vertical border on the right for the last cell */
+}
+
+.attempt-details {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: rgb(39, 39, 39);
+  margin: 1rem 0;
 }

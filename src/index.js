@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import SideNav from './SideNav';
+import QuizMenu from './QuizMenu';
+import QuestionPage from './QuestionPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <Helmet>
+        <title>Quiz Page</title>
+        <link rel="icon" href="/canvas.ico" />
+      </Helmet>
+
+      <Router>
+        <div className="main-container">
+        {/* side nav made to overarch all */}
+          <SideNav />
+          <Routes>
+            <Route path="/" element={<QuizMenu />} />
+            {/* has /:id to use it as a parameter */}
+            <Route path="/question/:id" element={<QuestionPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </HelmetProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
