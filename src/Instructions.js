@@ -12,6 +12,7 @@ function Instructions (){
         <h3 className='instruction-font' style={{marginBottom:"1rem"}}>The top bar is just for aesthetics when it comes to the availability stuff</h3>
         <h3 className='instruction-font' style={{marginBottom:"1rem"}}>The reset clears everything like the attempts and if a quiz is currently ongoing</h3>
         <h3 className='instruction-font' style={{marginBottom:"1rem"}}>Note that there are only 10 questions but some have 2 point values</h3>
+        <h3 className='instruction-font' style={{marginBottom:"1rem"}}>The attempt history can be viewed by clicking Attempt # when attempts exist</h3>
         <h3 className='instruction-font' style={{marginBottom:"1rem"}}>Hopefully everything works fine and it is downloaded with no issue, just drop a msg</h3>
         <h3 className='instruction-font' style={{marginBottom:"1rem"}}>To juan_miguel_miranda@dlsu.edu.ph if it is being cringe, many thankz :^)</h3>
 

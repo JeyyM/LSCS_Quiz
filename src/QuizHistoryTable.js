@@ -33,7 +33,7 @@ function QuizHistoryTable({ quizHistory, onAttemptClick }) {
           {keptAttempt && (
             <tr onClick={() => onAttemptClick(keptAttempt)}>
               <td className='tside'>KEPT</td>
-              <td>Attempt {quizHistory.indexOf(keptAttempt) + 1}</td>
+              <td style={{textDecoration:"underline", color:"darkgreen"}}>Attempt {quizHistory.indexOf(keptAttempt) + 1}</td>
               <td>{formatTime(keptAttempt.totalTimeSeconds)}</td>
               <td>{keptAttempt.score} out of {keptAttempt.totalPoints}</td>
             </tr>
@@ -44,7 +44,7 @@ function QuizHistoryTable({ quizHistory, onAttemptClick }) {
               <td className='tside'>
                 {attempt === quizHistory[quizHistory.length - 1] ? 'LATEST' : ''}
               </td>
-              <td>Attempt {quizHistory.length - index}</td>
+              <td style={{textDecoration:"underline", color:"darkgreen"}}>Attempt {quizHistory.length - index}</td>
               <td>{formatTime(attempt.totalTimeSeconds)}</td>
               <td>{attempt.score} out of {attempt.totalPoints}</td>
             </tr>

@@ -439,7 +439,7 @@ body {
 
 .pointer.correct {
   position: absolute;
-  left: -8rem; /* Adjust this value to position the pointer correctly */
+  left: -8rem;
   top: 50%;
   transform: translateY(-75%);
   width: auto;
@@ -466,22 +466,22 @@ body {
 .pointer.correct:after {
   left: 0;
   bottom: 0;
-  border-left: 2rem solid green; /* Double the border-left */
-  border-top: 2rem solid transparent; /* Double the border-top */
-  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+  border-left: 2rem solid green; 
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
 }
 
 .pointer.correct:before {
-  right: -2rem; /* Double the right offset */
+  right: -2rem; 
   bottom: 0;
-  border-left: 2rem solid green; /* Double the border-left */
-  border-top: 2rem solid transparent; /* Double the border-top */
-  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+  border-left: 2rem solid green; 
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
 }
 
 .pointer.wrong {
   position: absolute;
-  left: -9rem; /* Adjust this value to position the pointer correctly */
+  left: -9rem;
   top: 50%;
   transform: translateY(-75%);
   width: auto;
@@ -508,17 +508,17 @@ body {
 .pointer.wrong:after {
   left: 0;
   bottom: 0;
-  border-left: 2rem solid darkred; /* Double the border-left */
-  border-top: 2rem solid transparent; /* Double the border-top */
-  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+  border-left: 2rem solid darkred;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
 }
 
 .pointer.wrong:before {
-  right: -2rem; /* Double the right offset */
+  right: -2rem; 
   bottom: 0;
-  border-left: 2rem solid darkred; /* Double the border-left */
-  border-top: 2rem solid transparent; /* Double the border-top */
-  border-bottom: 2rem solid transparent; /* Double the border-bottom */
+  border-left: 2rem solid darkred;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
 }
 
 
@@ -606,36 +606,36 @@ body {
 .history-table th, .history-table td {
   padding: 1rem;
   text-align: left;
-  vertical-align: middle; /* Center the text vertically */
+  vertical-align: middle;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
   color: rgb(39, 39, 39);
-  border-bottom: 1px solid #ddd; /* Horizontal borders */
+  border-bottom: 1px solid #ddd;
 }
 
 .history-table th {
-  font-weight: bold; /* Ensure headers are bold */
+  font-weight: bold;
 }
 
 .th, .tside {
-  font-weight: bold !important; /* Ensure headers are bold */
+  font-weight: bold !important;
 }
 
 .history-table td {
-  border-right: 1px solid #ddd; /* Vertical borders */
+  border-right: 1px solid #ddd;
 }
 
 .history-table td:last-child {
-  border-right: none; /* Remove right border from the last column */
+  border-right: none;
 }
 
 .history-table th, .history-table td:first-child {
-  border-left: 1px solid #ddd; /* Vertical border on the left */
+  border-left: 1px solid #ddd;
 }
 
 .history-table th:last-child, .history-table td:last-child {
-  border-right: 1px solid #ddd; /* Vertical border on the right for the last cell */
+  border-right: 1px solid #ddd;
 }
 
 .attempt-details {
